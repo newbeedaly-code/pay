@@ -1,8 +1,9 @@
 package cn.newbeedaly.pay.api.vo;
 
 import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 
-public class PaymentReqVO {
+public class PaymentReqVO implements Serializable {
 
     @NotEmpty(message = "商户号不能为空")
     private String merchantId;

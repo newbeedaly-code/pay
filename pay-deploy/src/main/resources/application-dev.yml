@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8002
   servlet:
     context-path: /
 # 数据源
@@ -11,7 +11,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/pay?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
-    password: mysql123
+    password: 123456
   #允许存在多个Feign调用相同Service的接口
   main:
     allow-bean-definition-overriding: true
@@ -27,7 +27,7 @@ mybatis-plus:
 # FeignClient日志
 logging:
   level:
-    cn.newbeedaly.pay.open: debug
+    cn.newbeedaly.pay: debug
 # eurekaServer配置
 eureka:
   client:
