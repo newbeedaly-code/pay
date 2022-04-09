@@ -14,15 +14,19 @@ public class PayController implements PayClient {
 
     @Override
     public PaymentResVO getPaymentById(String key) {
-        logger.info("获取支付信息, 支付id {}", key);
+        logger.info("获取支付信息, 支付订单id {}", key);
         PaymentResVO vo = new PaymentResVO();
         vo.setId(key);
+        vo.setMerchantId("M-001");
+        vo.setOrderId("O-001");
+        vo.setPayStatus("SUCCESS");
+        vo.setPayAmount(1);
         return vo;
     }
 
     @Override
     public Boolean pay(PaymentReqVO pay) {
-        logger.info("请求支付 {}", pay);
+        logger.info("商户:{}, 订单号: {}, 发起支付, 订单支付中", pay.getMerchantId(), pay.getOrderId());
         return Boolean.TRUE;
     }
 }

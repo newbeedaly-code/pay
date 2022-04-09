@@ -9,7 +9,6 @@ public class PaymentReqVO {
     @NotEmpty(message = "订单号不能为空")
     private String orderId;
     private Integer payAmount;
-    private String payStatus;
 
     public String getMerchantId() {
         return merchantId;
@@ -35,11 +34,4 @@ public class PaymentReqVO {
         this.payAmount = payAmount;
     }
 
-    public String getPayStatus() {
-        return payStatus;
-    }
-
-    public void setPayStatus(String payStatus) {
-        this.payStatus = payStatus;
-    }
 }

@@ -19,8 +19,14 @@
     <dependencies>
         <dependency>
             <groupId>cn.newbeedaly</groupId>
-            <artifactId>common-api</artifactId>
+            <artifactId>order-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--feignClient-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 

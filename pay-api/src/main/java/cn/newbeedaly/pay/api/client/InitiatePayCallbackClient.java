@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/pay/api")
-public interface PayCallbackClient {
+public interface InitiatePayCallbackClient {
 
-    @GetMapping("/callback")
+    @GetMapping("/pay/callback")
     Boolean payCallback();
 }

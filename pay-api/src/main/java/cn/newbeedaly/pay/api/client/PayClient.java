@@ -18,4 +18,5 @@ public interface PayClient {
 
     @PostMapping("/pay")
     Boolean pay(@Validated PaymentReqVO pay);
+
 }
