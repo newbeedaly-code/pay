@@ -5,7 +5,6 @@ import cn.newbeedaly.pay.api.vo.res.PaymentResVO;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/pay")
 public interface PayClient {
 
 
@@ -14,7 +13,7 @@ public interface PayClient {
      * @param pay 支付请求信息
      * @return 支付结果
      */
-    @PostMapping("/pay")
+    @PostMapping("/pay/pay")
     Boolean pay(@Validated @RequestBody PaymentReqVO pay);
 
     /**
@@ -22,7 +21,7 @@ public interface PayClient {
      * @param key 支付ID
      * @return 支付信息
      */
-    @GetMapping("/pay/{key}")
+    @GetMapping("/pay/pay/{key}")
     PaymentResVO getPaymentById(@PathVariable("key") String key);
 
 }
