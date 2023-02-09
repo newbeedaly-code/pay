@@ -1,19 +1,28 @@
 package cn.newbeedaly.pay.api.client;
 
-import cn.newbeedaly.pay.api.vo.PaymentReqVO;
-import cn.newbeedaly.pay.api.vo.PaymentResVO;
+import cn.newbeedaly.pay.api.vo.req.PaymentReqVO;
+import cn.newbeedaly.pay.api.vo.res.PaymentResVO;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
-@RequestMapping("/pay/api")
+@RequestMapping("/pay")
 public interface PayClient {
 
-    @GetMapping("/pay/{key}")
-    PaymentResVO getPaymentById(@PathVariable("key") String key);
 
+    /**
+     * 支付
+     * @param pay 支付请求信息
+     * @return 支付结果
+     */
     @PostMapping("/pay")
     Boolean pay(@Validated @RequestBody PaymentReqVO pay);
+
+    /**
+     * 查询支付信息
+     * @param key 支付ID
+     * @return 支付信息
+     */
+    @GetMapping("/pay/{key}")
+    PaymentResVO getPaymentById(@PathVariable("key") String key);
 
 }

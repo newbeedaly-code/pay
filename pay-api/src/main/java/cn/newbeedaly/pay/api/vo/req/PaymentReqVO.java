@@ -1,4 +1,4 @@
-package cn.newbeedaly.pay.api.vo;
+package cn.newbeedaly.pay.api.vo.req;
 
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;

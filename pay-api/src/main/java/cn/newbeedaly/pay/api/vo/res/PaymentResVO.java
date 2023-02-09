@@ -1,11 +1,26 @@
-package cn.newbeedaly.pay.api.vo;
+package cn.newbeedaly.pay.api.vo.res;
 
 public class PaymentResVO {
 
+    /**
+     * 支付ID
+     */
     private String id;
+    /**
+     * 商户ID
+     */
     private String merchantId;
+    /**
+     * 订单ID
+     */
     private String orderId;
+    /**
+     * 支付金额
+     */
     private Integer payAmount;
+    /**
+     * 支付状态
+     */
     private String payStatus;
 
     public String getId() {
