@@ -8,13 +8,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class PayController implements PayClient {
+public class PayController extends PayBaseController implements PayClient {
 
-    Logger logger = LoggerFactory.getLogger(PayController.class );
+    Logger logger = LoggerFactory.getLogger(PayController.class);
 
     @Override
     public PaymentResVO getPaymentById(String key) {
-        logger.info("获取支付信息, 支付订单id {}", key);
+        logger.info("支付中心：获取支付信息, 支付id {}", key);
         PaymentResVO vo = new PaymentResVO();
         vo.setId(key);
         vo.setMerchantId("M-001");
@@ -26,7 +26,7 @@ public class PayController implements PayClient {
 
     @Override
     public Boolean pay(PaymentReqVO pay) {
-        logger.info("商户:{}, 订单号: {}, 发起支付, 订单支付中", pay.getMerchantId(), pay.getOrderId());
+        logger.info("支付中心：发起支付, 商户:{}, 订单号: {}, 订单支付中", pay.getMerchantId(), pay.getOrderId());
         return Boolean.TRUE;
     }
 }

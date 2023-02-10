@@ -4,10 +4,11 @@ import cn.newbeedaly.pay.adaptor.config.DefaultFeignClientConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(url = "127.0.0.1:8000", name = "order", contextId = "PayCallbackFeignClient", configuration = DefaultFeignClientConfiguration.class)
+@FeignClient(url = "127.0.0.1:8000", name = "order", contextId = "PayCallbackFeignClient",
+        path = "/order", configuration = DefaultFeignClientConfiguration.class)
 public interface PayCallbackFeignClient {
 
-    @GetMapping("/order/pay/callback")
+    @GetMapping("/pay/callback")
     Boolean payCallback();
 
 }
