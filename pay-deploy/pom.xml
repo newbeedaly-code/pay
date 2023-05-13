@@ -14,10 +14,6 @@
     <dependencies>
         <dependency>
             <groupId>cn.newbeedaly</groupId>
-            <artifactId>pay-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.newbeedaly</groupId>
             <artifactId>pay-domain</artifactId>
         </dependency>
     </dependencies>
